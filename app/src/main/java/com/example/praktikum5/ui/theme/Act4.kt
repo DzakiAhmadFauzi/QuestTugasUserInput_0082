@@ -49,3 +49,14 @@ fun Act4() {
                 .fillMaxSize()
                 .padding(padding)
         ) {
+            Image(
+                painter = painterResource(R.drawable.header_neon),
+                contentDescription = stringResource(R.string.header_description),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(R.dimen.header_height)),
+                contentScale = ContentScale.Crop
+            )
+
+
+}
