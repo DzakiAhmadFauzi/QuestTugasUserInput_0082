@@ -273,3 +273,27 @@ fun Act4() {
 
                     Spacer(Modifier.height(8.dp))
 
+                    Button(
+                        onClick = { },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(dimensionResource(R.dimen.button_height)),
+                        shape = RoundedCornerShape(
+                            dimensionResource(R.dimen.button_corner)
+                        ),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(R.color.button_gray),
+                            contentColor = colorResource(R.color.card_white)
+                        )
+                    ) {
+                        Text(
+                            text = stringResource(R.string.proceed),
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
