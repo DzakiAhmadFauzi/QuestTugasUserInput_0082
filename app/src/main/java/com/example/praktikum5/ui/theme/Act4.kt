@@ -73,3 +73,15 @@ fun Act4() {
                     defaultElevation = dimensionResource(R.dimen.card_elevation)
                 )
             ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .verticalScroll(rememberScrollState())
+                        .padding(
+                            horizontal = dimensionResource(R.dimen.card_padding),
+                            vertical = dimensionResource(R.dimen.content_padding)
+                        ),
+                    verticalArrangement = Arrangement.spacedBy(
+                        dimensionResource(R.dimen.field_spacing)
+                    )
+                ) {
