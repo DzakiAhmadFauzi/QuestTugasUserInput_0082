@@ -58,5 +58,18 @@ fun Act4() {
                 contentScale = ContentScale.Crop
             )
 
-
-}
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = dimensionResource(R.dimen.card_top_padding)),
+                shape = RoundedCornerShape(
+                    topStart = dimensionResource(R.dimen.card_corner),
+                    topEnd = dimensionResource(R.dimen.card_corner)
+                ),
+                colors = CardDefaults.cardColors(
+                    containerColor = colorResource(R.color.card_white)
+                ),
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = dimensionResource(R.dimen.card_elevation)
+                )
+            ) {
