@@ -241,3 +241,35 @@ fun Act4() {
                         }
                     }
 
+                    Text(
+                        text = stringResource(R.string.skills_title),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = dimensionResource(R.dimen.label_size).value.sp
+                    )
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        SkillCheckbox(
+                            label = stringResource(R.string.skill_android),
+                            checked = android,
+                            onCheckedChange = { android = it }
+                        )
+
+                        SkillCheckbox(
+                            label = stringResource(R.string.skill_uiux),
+                            checked = uiux,
+                            onCheckedChange = { uiux = it }
+                        )
+
+                        SkillCheckbox(
+                            label = stringResource(R.string.skill_web),
+                            checked = web,
+                            onCheckedChange = { web = it }
+                        )
+                    }
+
+                    Spacer(Modifier.height(8.dp))
+
