@@ -44,3 +44,8 @@ fun Act4() {
     Scaffold(
         containerColor = colorResource(R.color.page_background)
     ) { padding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+        ) {
