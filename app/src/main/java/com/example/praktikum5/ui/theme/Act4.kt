@@ -94,3 +94,13 @@ fun Act4() {
                         textAlign = TextAlign.Center
                     )
 
+                    Text(
+                        text = stringResource(R.string.form_subtitle),
+                        modifier = Modifier.fillMaxWidth(),
+                        color = colorResource(R.color.text_secondary),
+                        fontSize = dimensionResource(R.dimen.subtitle_size).value.sp,
+                        textAlign = TextAlign.Center
+                    )
+
+                    Spacer(Modifier.height(8.dp))
+
