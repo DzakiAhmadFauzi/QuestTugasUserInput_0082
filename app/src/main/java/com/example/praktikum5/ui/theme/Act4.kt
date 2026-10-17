@@ -41,3 +41,6 @@ fun Act4() {
 
     val calendar = Calendar.getInstance()
 
+    Scaffold(
+        containerColor = colorResource(R.color.page_background)
+    ) { padding ->
