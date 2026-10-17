@@ -161,3 +161,60 @@ fun Act4() {
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
+                        OutlinedButton(
+                            onClick = {
+                                DatePickerDialog(
+                                    context,
+                                    { _, year, month, day ->
+                                        tanggalLahir = "%02d/%02d/%04d".format(
+                                            day,
+                                            month + 1,
+                                            year
+                                        )
+                                    },
+                                    calendar.get(Calendar.YEAR),
+                                    calendar.get(Calendar.MONTH),
+                                    calendar.get(Calendar.DAY_OF_MONTH)
+                                ).show()
+                            },
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(56.dp),
+                            shape = RoundedCornerShape(
+                                dimensionResource(R.dimen.input_corner)
+                            ),
+                            contentPadding = PaddingValues(horizontal = 8.dp)
+                        ) {
+                            Text(
+                                text = tanggalLahir.ifBlank {
+                                    stringResource(R.string.birth_date)
+                                },
+                                modifier = Modifier.weight(1f),
+                                maxLines = 1,
+                                fontSize = 12.sp
+                            )
+                            Text("▦", fontSize = 20.sp)
+                        }
+
+                        Box(modifier = Modifier.weight(1f)) {
+                            OutlinedButton(
+                                onClick = { dropdown = true },
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(56.dp),
+                                shape = RoundedCornerShape(
+                                    dimensionResource(R.dimen.input_corner)
+                                ),
+                                contentPadding = PaddingValues(horizontal = 8.dp)
+                            ) {
+                                Text(
+                                    text = experience.ifBlank {
+                                        stringResource(R.string.experience)
+                                    },
+                                    modifier = Modifier.weight(1f),
+                                    maxLines = 1,
+                                    fontSize = 12.sp
+                                )
+                                Text("▾", fontSize = 20.sp)
+                            }
+
