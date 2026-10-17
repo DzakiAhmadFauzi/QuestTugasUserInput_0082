@@ -104,3 +104,38 @@ fun Act4() {
 
                     Spacer(Modifier.height(8.dp))
 
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        OutlinedTextField(
+                            value = namaDepan,
+                            onValueChange = { namaDepan = it },
+                            placeholder = {
+                                Text(stringResource(R.string.first_name))
+                            },
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(56.dp),
+                            singleLine = true,
+                            shape = RoundedCornerShape(
+                                dimensionResource(R.dimen.input_corner)
+                            )
+                        )
+
+                        OutlinedTextField(
+                            value = namaBelakang,
+                            onValueChange = { namaBelakang = it },
+                            placeholder = {
+                                Text(stringResource(R.string.last_name))
+                            },
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(56.dp),
+                            singleLine = true,
+                            shape = RoundedCornerShape(
+                                dimensionResource(R.dimen.input_corner)
+                            )
+                        )
+                    }
+
