@@ -297,3 +297,25 @@ fun Act4() {
     }
 }
 
+@Composable
+private fun SkillCheckbox(
+    label: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(2.dp)
+    ) {
+        Checkbox(
+            checked = checked,
+            onCheckedChange = onCheckedChange,
+            modifier = Modifier.size(36.dp)
+        )
+
+        Text(
+            text = label,
+            fontSize = dimensionResource(R.dimen.skill_text_size).value.sp
+        )
+    }
+}
