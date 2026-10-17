@@ -218,3 +218,26 @@ fun Act4() {
                                 Text("▾", fontSize = 20.sp)
                             }
 
+                            DropdownMenu(
+                                expanded = dropdown,
+                                onDismissRequest = { dropdown = false }
+                            ) {
+                                listOf(
+                                    R.string.beginner,
+                                    R.string.intermediate,
+                                    R.string.advanced
+                                ).forEach { option ->
+                                    val optionText = stringResource(option)
+
+                                    DropdownMenuItem(
+                                        text = { Text(optionText) },
+                                        onClick = {
+                                            experience = optionText
+                                            dropdown = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
+
