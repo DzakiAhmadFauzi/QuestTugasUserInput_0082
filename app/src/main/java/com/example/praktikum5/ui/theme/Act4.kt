@@ -25,3 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.example.praktikum5.R
 import java.util.Calendar
 
+@Composable
+fun Act4() {
+    val context = LocalContext.current
+
