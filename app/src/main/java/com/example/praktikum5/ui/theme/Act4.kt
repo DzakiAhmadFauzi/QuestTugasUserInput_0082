@@ -29,3 +29,5 @@ import java.util.Calendar
 fun Act4() {
     val context = LocalContext.current
 
+    var namaDepan by remember { mutableStateOf("") }
+    var namaBelakang by remember { mutableStateOf("") }
