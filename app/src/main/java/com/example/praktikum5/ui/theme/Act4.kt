@@ -85,3 +85,12 @@ fun Act4() {
                         dimensionResource(R.dimen.field_spacing)
                     )
                 ) {
+                    Text(
+                        text = stringResource(R.string.form_title),
+                        modifier = Modifier.fillMaxWidth(),
+                        color = colorResource(R.color.title_purple),
+                        fontSize = dimensionResource(R.dimen.title_size).value.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center
+                    )
+
